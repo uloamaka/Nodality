@@ -1,5 +1,5 @@
 import globals from "globals";
-import pluginJs from "@eslint/js";
+// import pluginJs from "@eslint/js";
 import pluginTs from "@typescript-eslint/eslint-plugin";
 import parserTs from "@typescript-eslint/parser";
 
@@ -23,7 +23,7 @@ export default [
   },
   {
     rules: {
-      ...pluginJs.configs.recommended.rules,
+      // ...pluginJs.configs.recommended.rules,
       ...pluginTs.configs.recommended.rules,
       "no-unused-vars": "error",
       "no-undef": "error",

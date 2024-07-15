@@ -1,12 +1,9 @@
-import express, { Request, Response } from "express";
+import app from './app';
+import Logger from './Services/logger';
+import { PORT } from './Utils/config';
 
-const app = express();
-const port = 3000;
+const logger = new Logger('server');
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, TypeScript with Express!");
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, async () => {
+  logger.log(`Server running on ${PORT}`, {});
 });
